@@ -4,17 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="robots" content="index, follow"> 
     <meta name="description" content="Pagina para encontrar los mejores trabajos del mundo">
-    <title>Document</title>
+    <title>Curso JSCAMP</title>
+    <meta name="theme-color" content="#09f">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: rgb(227, 227, 255);
+        }
+        .link{
+            text-decoration: none;
+            margin-right: 15px;
+            color: rgb(76, 146, 123);
+        }
+        .buttons{
+            font-family: monospace;
+            font-size: 17px;
+            border: none;   
+            background-color: rgb(95, 170, 255);        
+            color:aliceblue; 
+        }
+    </style>
+
+
 </head>
 
 <body>
     <header>
         <h2>DevJobs</h2>
         <nav>
-            <a href="">Inicio</a>
-            <a href="">Trabajos</a>
-            <a href="">Contacto</a>
+            <a class="link" href="">Inicio</a>
+            <a class="link" href="">Trabajos</a>
+            <a class="link" href="">Contacto</a>
+            <a class="link" href="https://www.youtube.com/" target="_blank" rel="noreferred" >Youtube</a>
         </nav>
 
         <div>
@@ -54,6 +78,8 @@
                     mejores
                     talentos con las empresas más innovadoras.</p>
             </header>
+<!-- Comentario de ejemplo-->
+
 
 
             <footer>
@@ -92,6 +118,76 @@
                         directamente en tu correo electrónico.</p>
                 </article>
             </footer>
+        </section>
+
+        <section>
+            <h3>Contáctanos</h3>
+
+            <form method="post", action="/">
+                <fieldset style="width: 400px;">
+                    <legend>Formulario de contacto</legend>
+
+                    <label for="name">Email:</label>
+                    <input type="email" id="name" name="name" required placeholder="Fulanito@detal.com">
+                    
+
+                    <label style="display: block"> Mensaje:
+                        <input type="text" name="message" required placeholder="Escribe tu mensaje aqui">
+                        
+                    </label>
+
+                    <label style="display: block"> Telefono:
+                        <input type="tel" name="number" required placeholder="Coloca tu numero aquí">
+                        
+                    </label>
+
+
+                    <input class="buttons" type="submit" value="Enviar">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Lenguajes de programacion</legend>
+
+                    <datalist id="languages">
+                        <option value="javascripts">javascripts</option>
+                        <option value="python">python</option>
+                        <option value="c++">c++</option>
+                        <option value="c#">c#</option>
+                    </datalist>
+
+                    <label>Selecciona tu lenguaje favorito
+                        <input list="languages" name="languages">
+
+                    </label>
+
+                </fieldset>
+
+
+            </form>
+
+
+        </section>
+
+        
+
+
+        <section>
+            <h2>Sobre mí</h2>
+
+            <details>
+                <summary>Nivel de estudios</summary>
+                <p>Estudiante de Ingeniería en Informática.</p>
+            </details>
+
+            <details>
+                <summary>Habilidades</summary>
+                <ul>
+                    <li>Desarrollo web</li>
+                    <li>Programación en JavaScript</li>
+                    <li>Gestión de bases de datos</li>
+                </ul>
+            </details>
         </section>
 
 
