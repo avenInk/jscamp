@@ -1,0 +1,69 @@
+:root{
+
+
+    --testx-primary-color: rgb(240, 240, 240);
+    --primary-background-color: rgb(13, 42, 70);
+    --card_bacrkground-color: rgb(24, 61, 95);
+    --secundary-shine: rgb(134, 211, 255);
+    --primary-shine: rgb(47, 115, 163);
+    --text-muted: rgb(224, 224, 224);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--testx-primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+
+article{
+    background-color: var(--card_bacrkground-color);
+    border-radius: 4px;
+    margin: 20px;
+    padding: 1rem;
+    border: 0px;
+    box-shadow: 0px 1px 9px 3px rgba(4, 9, 27, 0.247);
+
+    svg{
+        fill: var(--secundary-shine);
+        background-color: var(--primary-shine);
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+        padding: 0.7rem;
+       
+    }
+    p{
+        color: var(--text-muted);
+        margin-top: 0.5rem;
+        line-height: 1.5rem;
+    };
+
+    h2{
+        font-weight: 500;
+    }
+
+
+}
+body{
+    background-color: var(--primary-background-color);
+
+ }
+
+
+ main > section:nth-last-child(3) footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    article{
+        height: 20rem;
+    }
+}
+
+ 
