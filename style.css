@@ -2,10 +2,10 @@
 
 
     --testx-primary-color: rgb(240, 240, 240);
-    --primary-background-color: rgb(13, 42, 70);
-    --card_bacrkground-color: rgb(24, 61, 95);
+    --primary-background-color: rgb(9, 25, 41);
+    --card_bacrkground-color: rgb(18, 42, 65);
     --secundary-shine: rgb(134, 211, 255);
-    --primary-shine: rgb(47, 115, 163);
+    --primary-shine: rgb(45, 111, 158);
     --text-muted: rgb(224, 224, 224);
     --button-color: #1173d4;
 }
@@ -27,7 +27,7 @@ article{
     border: 0px;
     box-shadow: 0px 1px 9px 3px rgba(4, 9, 27, 0.247);
 
-    svg{
+    >svg{
         fill: var(--secundary-shine);
         background-color: var(--primary-shine);
         border-radius: 50%;
@@ -74,8 +74,20 @@ button{
     color: var(--testx-primary-color);
     padding: 0.4rem 0.7rem;
     cursor: pointer;
+    &:active{
+        transform: scale(0.95)
     }
- 
+    &:hover{
+        background-color: var(--text-muted);
+        color: var(--primary-background-color);
+    
+    }
+    &.is-disabled{
+        background-color: gray;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
 
 input{
     border-radius: 4px;
@@ -92,6 +104,10 @@ select{
     font-size: 16px; 
     margin: 10px;
     padding: 2px;
+    &:hover{
+        cursor: pointer;
+        background-color: var(--button-color);
+    }
 }
 
 main > label{
@@ -112,14 +128,99 @@ section > article > header{
 }
 
 main > section > article{
+    &:hover{
+        box-shadow: 0px 4px 12px 4px rgba(4, 9, 27, 0.247);
+        transform: translateY(-5px);
+        transition: all 0.3s;
+        cursor: pointer;
+    }
     margin: 0;
     box-shadow: none;
     border-radius: 0;
     background-color: transparent;
     border-bottom: 1px solid rgba(120, 120, 182, 0.164);
+    &:last-child{
+        border-bottom: none;
+    }
 }
 
 main > section{
     border: 2px solid rgba(120, 120, 182, 0.164);
     border-radius: 10px;
+}
+
+.pagination{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+margin-block: 2rem;
+
+
+ a{
+    text-decoration: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    transition: all 0.3s;
+    &.is-active{
+        background-color: var(--button-color);
+        pointer-events: none;
+    }
+    &:hover, &:focus{
+        background-color: var(--text-muted);
+        color: var(--primary-background-color);                 
+    }
+    &:active{
+        transform: scale(0.95);
+    }
+ }
+}
+
+
+
+.detalles-trabajo{
+    background-color: transparent;
+    box-shadow: none;
+
+    >ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.4rem;
+        
+        >li{
+            &:first-child{
+                margin-top: 1rem;
+            }
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            >svg{
+                stroke: var(--secundary-shine);   
+                height: 1.4rem;
+            }
+        }
+    }
+
+}
+
+main > div{
+    display: flex;
+    justify-content:end;
+}
+
+main > header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.aplicar-boton{
+    font-size: 1.1rem;
+    padding: 0.9rem ;
+    box-shadow: 0px 1px 10px 1px var(--button-color);
 }

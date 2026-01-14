@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de busqueda</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="./script.js"></script>
 </head>
 <body>
     
     <header>
         <h2>DevJobs</h2>
         <nav>
-            <a href="">Inicio</a>
+            <a href="./index.html">Inicio</a>
             <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">Trabajos</a>
             <a href="">Contacto</a>
         </nav>
@@ -69,7 +70,7 @@
             <article>
                 <header>
                     <h3>Desarrollador Frontend</h3>
-                    <button>Aplicar</button>
+                    <a href="./pages/desarrollo.html"><button class="boton-aplicar">Aplicar</button></a>
                 </header>
                 <main>
                     <p>Empresa XYZ - Remoto</p>
@@ -80,17 +81,17 @@
             <article>
                 <header>
                     <h3>Desarrollador Backend</h3>
-                    <button>Aplicar</button>
+                    <button class="boton-aplicar">Aplicar</button>
                 </header>
                 <main>
                     <p>Empresa ABC - Presencial</p>
                     <p>Buscamos un ingeniero de software con experiencia en desarrollo backend y conocimiento en Python, Django, y PostgreSQL. El candidato ideal debe ser capaz de trabajar en un equipo y tener buenas habilidades de comunicación</p>
                 </main>
             </article>
-            <article>
+            <article href="./pages/desarrollo.html">
                 <header>
                     <h3>Desarrollador Fullstack</h3>
-                    <button>Aplicar</button>
+                    <button class="boton-aplicar">Aplicar</button>
                 </header>
                 <main>
                     <p>Empresa 123 - Hibrido</p>
@@ -100,7 +101,7 @@
             <article>
                 <header>
                     <h3>Ingeniero de Datos</h3>
-                    <button>Aplicar</button>
+                    <button class="boton-aplicar">Aplicar</button>
                 </header>
                 <main>
                     <p>Empresa DataTech - Remoto</p>
@@ -111,6 +112,15 @@
 
         </section>
 
+        <nav class="pagination">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg></a>
+            <a class="is-active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg></a>
+        </nav>
 
     </main>
 
